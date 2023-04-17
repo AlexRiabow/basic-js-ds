@@ -54,11 +54,8 @@ class BinarySearchTree {
   }
 
   has(data) {
-    if (this.Root === null) return false
-    if (this.Root.data === data) return true
     if (this.checkNextNode(this.Root,data) === null) return false
     else return true
-    
   }
 
   find(data) {
@@ -101,7 +98,7 @@ class BinarySearchTree {
       }
         let aux = this.findMin(node.right);
         node.data = aux;
-        node.right = this.removeNode(node.right , aux);
+        node.right = this.removeNode( node.right , aux);
         return node
     }
   }
